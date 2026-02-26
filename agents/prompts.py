@@ -1,5 +1,3 @@
-# agents/prompts.py
-
 AGENTS = {
     "ml_engineer": {
         "name": "🔧 ML Engineer",
