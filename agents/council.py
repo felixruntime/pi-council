@@ -1,6 +1,9 @@
 import requests
 import json
 import time
+import datetime
+import pyfiglet
+import os
 from .config import OLLAMA_URL, MODEL, TEMPERATURE, NUM_CTX
 from .prompts import AGENTS, MODERATOR_PROMPT
 from .context import FIAP_CURRICULUM, PI5_SPECS
@@ -26,7 +29,7 @@ def query_ollama(system_prompt, user_message):
     }
 
     try:
-        response = requests.post(OLLAMA_URL, json=payload, timeout=600)
+        response = requests.post(OLLAMA_URL, json=payload, timeout=1200)
         return response.json()["response"]
     except Exception as e:
         return f"[ERRO DE CONEXÃO: {e}]"
@@ -43,11 +46,12 @@ def run_council(question=None):
     responses = {}
     separator = "=" * 60
 
-    print(f"\n{separator}")
-    print("  CONSELHO DE IA DO RASPBERRY PI 5")
-    print("  Base de Conhecimento: Currículo FIAP")
-    print(f"{separator}\n")
-    print(f"Pergunta: {question}\n")
+    banner = pyfiglet.figlet_format("PI COUNCIL", font="slant")
+    
+    print("\033[96m" + banner + "\033[0m")
+    print("\033[92m" + "  Base de Conhecimento: Currículo FIAP | Hardware: Pi 5 16GB" + "\033[0m")
+    print("-" * 65)
+    print(f"\033[1mPergunta:\033[0m {question}\n")
 
     # Fase 1: Cada agente se pronuncia sequencialmente
     for key, agent in AGENTS.items():
@@ -80,3 +84,21 @@ def run_council(question=None):
     print(f"\n{separator}")
     print("  SESSÃO ENCERRADA")
     print(separator)
+
+    output_dir = "benchmarks"
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    model_name = MODEL.replace(":", "-") 
+    filename = f"{output_dir}/{model_name}_{timestamp}.txt"
+    
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(f"PERGUNTA: {question}\n")
+        f.write("="*60 + "\n")
+        for key, resp in responses.items():
+            f.write(f"AGENTE: {key}\nRESPOSTA: {resp}\n\n")
+        f.write("="*60 + "\n")
+        f.write(f"DECISÃO FINAL:\n{final_decision}")
+    
+    print(f"\n✅ Benchmark salvo em: {filename}")

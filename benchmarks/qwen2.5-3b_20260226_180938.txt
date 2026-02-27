@@ -1,0 +1,61 @@
+PERGUNTA: Com base no curriculo do curso de IA da FIAP, qual deve ser o primeiro projeto prático 'ponta a ponta' a ser desenvolvido no Raspberry Pi 5 de 16GB?
+============================================================
+AGENTE: ml_engineer
+RESPOSTA: Baseado no currículo da FIAP e nas capacidades do Raspberry Pi 5 com 16GB de memória RAM, um bom primeiro projeto seria criar um sistema de recomendação personalizado para uma loja virtual usando dados reais. O modelo preditivo poderia ser baseado em regressão logística ou árvores de decisão, utilizando feedbacks dos clientes e histórico de compras. Seria necessário coletar e preparar os dados, treinar o modelo localmente no Raspberry Pi (que suporta grandes modelos até 7B com quantização Q4), e finalizar o pipeline com uma interface para recomendar produtos personalizados aos usuários, validando as métricas de desempenho com KPIs como precisão nas recomendações e experiência do usuário.
+
+AGENTE: deep_learning_architect
+RESPOSTA: Baseado no currículo da FIAP e no hardware do Raspberry Pi 5, um excelente projeto inicial seria criar uma IA de texto conversacional usando GANs (Redes Genéticas). Este projeto combinaria a visão computacional para treinar um modelo GAN capaz de gerar respostas em tempo real baseadas nas interações com usuários. O Raspberry Pi 5 fornecerá a capacidade de processamento necessário para essa tarefa, e o uso de uma arquitetura de GANs permitirá explorarmos os limites da inteligência sintética no hardware atual.
+
+AGENTE: nlp_specialist
+RESPOSTA: Com base nos conhecimentos e recursos disponíveis, um excelente primeiro projeto seria criar um chatbot conversacional inteligente usando NLP (processamento de linguagem natural) e RPA (automação de processos robóticos). Este projeto poderia abranger integração com o Raspberry Pi 5 para reconhecimento de voz ou texto. Usando técnicas avançadas de IA, o chatbot seria capaz de entender diferentes sentimentos e contextos em conversas, além de integrar dados locais. Seriam necessários modelos NLP robustos como o Qwen 2.5 e a plataforma Ollama para garantir precisão. Adicionalmente, este projeto permitiria explorar a integração com tecnologias RAG (Representations for Retrieval-Augmented Generation) e RPA, proporcionando uma experiência completa de chatbot autônomo e integrado.
+
+AGENTE: vision_engineer
+RESPOSTA: Com base no seu currículo e hardware disponível, um excelente primeiro projeto seria uma aplicação de detecção de objetos em tempo real usando YOLO (You Only Look Once) para a câmera do Raspberry Pi. Este projeto permitirá integrar o aprendizado de máquina com visão computacional real-time, demonstrando efetivamente como as tecnologias avançadas podem ser aplicadas práticamente e visualmente impressionantes. Com YOLO rodando localmente no Raspberry Pi 5, você poderá mostrar a detecção em tempo real de objetos como carros ou rostos, que será uma experiência emocionante para os usuários, ressaltando o poder do hardware e software combinados.
+
+AGENTE: edge_ai_specialist
+RESPOSTA: Com base nos conhecimentos sobre o Raspberry Pi 5 e o currículo da FIAP em Inteligência Artificial, um bom projeto para iniciarmos seria uma aplicação de visão computacional no Raspberry Pi 5. Isso poderia envolver desenvolvimento de um sistema de reconhecimento facial ou identificação de objetos usando câmera USB do Raspberry Pi. Também poderíamos integrar sensores e usar a memória RAM extra para alojar o modelo Qwen 2.5, permitindo operações embutidas em tempo real sem depender de conexão à internet. Este projeto seria uma oportunidade de explorar IA local, visão computacional e otimização de recursos do dispositivo.
+
+AGENTE: ai_strategist
+RESPOSTA: Com base no seu currículo, um bom primeiro projeto prático para iniciativa poderia ser uma solução de inteligência artificial assistindo na gestão de redes sociais. Este projeto permitiria o uso de modelos avançados como NLP e chatbots para automatizar a análise de conteúdo e responder em tempo real nas redes sociais. Seria possível implementar essa IA no Raspberry Pi 5, usando sensores para monitoramento contínuo das páginas da rede social associadas à empresa ou cliente. Além disso, a integração com o Google Cloud (uma das plataformas de nuvem mencionadas) poderia ser usada para armazenar e processar dados em grande escala de forma eficiente. Este projeto atende às necessidades estratégicas do mercado atualizando habilidades no ANO 2 do curso, bem como promovendo visão de negócio relevante na área da segurança cibernética das redes sociais e sustentabilidade digital.
+
+============================================================
+DECISÃO FINAL:
+### Resumo dos Argumentos:
+1. **ML Engineer**: Sistema de recomendação personalizado para loja virtual usando dados reais.
+2. **Deep Learning Architect**: IA conversacional usando GANs com visão computacional.
+3. **NLP Specialist**: Chatbot inteligente integrando RPA e técnicas avançadas de NLP.
+4. **Vision Engineer**: Detecção em tempo real de objetos usando YOLO com câmera do Raspberry Pi 5.
+5. **Edge AI Specialist**: Reconhecimento facial ou identificação de objetos local usando Raspberry Pi 5.
+6. **AI Strategist**: Assistente de IA para gestão de redes sociais no Google Cloud.
+
+### Ponto de Convergência:
+Todos os projetos usam o Raspberry Pi 5 e tecnologias avançadas em IA, visão computacional e NLP, evidenciando a necessidade de um projeto focado na Inteligência Artificial que seja impactante para o portfólio.
+
+### Decisão Final:
+**Projeto: Assistente de IA para Redes Sociais (AI Social Assistant)**
+
+O projeto de assistente de IA para redes sociais atende ao nosso objetivo estratégico, promovendo visão de negócio relevante e atualizando habilidades. Além disso, ele é um aplicativo prático que pode ter impacto significativo nos negócios através da automação de tarefas críticas nas redes sociais.
+
+### Estrutura de Rotas para 4 Semanas:
+
+#### **Semana 1:**
+- Recoleto e prepara os dados relevantes do Twitter (câmera Raspberry Pi).
+- Implementa YOLO no Raspberry Pi para detecção de hashtags.
+- Treina um modelo NLP simples usando Qwen 2.5.
+
+#### **Semana 2:**
+- Integra a rede social com o assistente de IA usando RPA.
+- Adapta e treina o modelo NLP (Qwen 2.5) para entender as interações humanas.
+- Implementa sensores no Raspberry Pi para monitoramento contínuo.
+
+#### **Semana 3:**
+- Desenvolve um chatbot inteligente capaz de responder em tempo real usando NLP.
+- Integra soluções avançadas de segurança cibernética no projeto (com Google Cloud).
+- Realiza testes pós-integração e correções para garantir eficiência.
+
+#### **Semana 4:**
+- Finaliza o desenvolvimento do assistente de IA.
+- Faz deploy final em ambientes de produção e realiza validações operacionais.
+- Documenta todo o processo, incluindo resultados e aprendizados. 
+
+Esta estrutura permite que o projeto avance progressivamente, garantindo uma solução robusta e eficiente ao final da quarta semana.
