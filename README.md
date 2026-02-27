@@ -103,6 +103,8 @@ ollama pull phi3.5
 ```bash
 git clone https://github.com/felixruntime/pi-council.git
 cd pi-council
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 python3 main.py "Your question"
 ```
