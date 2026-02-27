@@ -69,7 +69,7 @@ We tested the limits of the Raspberry Pi 5 using the most relevant "Edge-class" 
 
 ### Project Structure
 ```text
-pi5-agent-debate/
+pi-council/
 ├── main.py                # Main orchestrator (entry point)
 ├── requirements.txt       # Dependencies (requests, pyfiglet, etc.)
 ├── .gitignore             # Ignore __pycache__ and local logs
